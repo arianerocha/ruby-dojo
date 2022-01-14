@@ -1,4 +1,4 @@
-Descubra o assassino
+# Descubra o assassino
 
 O empresário Bill G. Ates foi assassinado e o corpo dele foi deixado na frente da delegacia de polícia. O detetive Lin Ust Orvalds foi escolhido para investigar este caso. Após uma série de investigações, ele organizou uma lista com prováveis assassinos, os locais do crime e quais armas poderiam ter sido utilizadas.
 
@@ -31,7 +31,14 @@ Armas:
 5. Maça
 6. Gládio
 
-Uma testemunha foi encontrada, mas ela só consegue responder se Lin fornecer uma teoria. Para cada teoria ele "chuta" um assassino, um local e uma arma. A testemunha então responde com um número. Se a teoria estiver correta (assassino, local e arma corretos), ela responde 0. Se a teoria está errada, um valor 1,2 ou 3 é retornado. 1 indica que o assassiona está incorreto; 2 indica que o local está incorreto; 3 indica que a arma está incorreta. Se mais de uma suposição está incorreta, ela retorna um valor arbitrário entre as que estão incorretos (isso é totalmente aleatório).
+Uma testemunha foi encontrada, mas ela só consegue responder se Lin fornecer uma teoria. Para cada teoria ele "chuta" um assassino, um local e uma arma. A testemunha então responde com um número. 
+* Se a teoria estiver correta (assassino, local e arma corretos), ela responde 0. 
+* Se a teoria está errada, um valor 1,2 ou 3 é retornado. 
+  * 1 indica que o assassiona está incorreto; 
+  * 2 indica que o local está incorreto; 
+  * 3 indica que a arma está incorreta. 
+* Se mais de uma suposição está incorreta, ela retorna um valor arbitrário entre as que estão incorretos (isso é totalmente aleatório).
+
 
 Por exemplo, se o assassino for Donald Duck Knuth usando um trezoitão em Tokio:
 
