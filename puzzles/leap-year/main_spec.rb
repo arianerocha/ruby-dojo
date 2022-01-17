@@ -1,9 +1,24 @@
 require './puzzles/leap-year/main'
 
-RSpec.describe 'main' do
-  # let(:nome_que_tu_quiser) { 'coisa' }
-  #expect(is_leap(test_value)).to eq(false)
-  
+RSpec.describe 'main' do 
+  context 'when call list_devs' do
+    let(:devs) do
+      [
+        "1° Pilot: Gaspa -- Copilot: Felipe Marchi",
+        "2° Pilot: Felipe Marchi -- Copilot: Helder",
+        "3° Pilot: Helder -- Copilot: Luiz Meier",
+        "4° Pilot: Luiz Meier -- Copilot: Laura",
+        "5° Pilot: Laura -- Copilot: Carlos Mafra",
+        "6° Pilot: Carlos Mafra -- Copilot: Gabriel Muller",
+        "7° Pilot: Gabriel Muller -- Copilot: Igor F"
+      ]
+    end
+
+    it 'list dojo participants' do
+      expect(list_devs).to eq(devs)
+    end
+  end
+
   it 'nao eh divisivel por 4 e nao eh bissexto' do
     test_value = (2*4)+1
     expect(is_divisible_to_4(test_value)).to eq(false)
@@ -30,17 +45,5 @@ RSpec.describe 'main' do
   # end
 end
 
-
 # rodar programa: bundle exec ruby main.rb
 # rodar teste: bundle exec rspec main_spec.rb 
-
-# Definição
-# O ano for divisível por 4, mas não divisível por 100, exceto se ele for também divisível por 400
-
-# Gaspa
-# Felipe Marchi
-# Helder
-# Luiz Meier
-# Laura, Carlos
-# Muller
-# Igor F
