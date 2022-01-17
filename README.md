@@ -1,5 +1,6 @@
 # Ruby Coding Dojo
 
+[Doc with some helps](https://hackmd.io/KqltkU70SFG_MypXNOzYCw?view)
 
 Coding Dojo is a meeting around a programming challenge where people are encouraged to participate and share their coding skills with the audience while they solve the problem.
 One of the principles of the coding dojo is to create a safe, collaborative, non-competitive environment that brings together people with various skill levels, to test new ideas allowing continuous learning.
