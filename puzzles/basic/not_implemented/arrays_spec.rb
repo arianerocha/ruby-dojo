@@ -56,6 +56,5 @@ RSpec.describe 'arrays' do
       expect(result).to eq([1, 2, 3, 4])
     end
   end
-
 end
 
