@@ -9,6 +9,11 @@ def list_devs
     { pilot: 'Laura', copilot: 'Carlos Mafra'},
     { pilot: 'Carlos Mafra', copilot: 'Gabriel Muller'},
     { pilot: 'Gabriel Muller', copilot: 'Igor F'},
+    { pilot: 'Luiz Meier', copilot: 'Rohden'},
+    { pilot: 'Rohden', copilot: 'Arthur'},
+    { pilot: 'Arthur', copilot: 'Helder'},
+    { pilot: 'Helder', copilot: 'Henrique'},
+    { pilot: 'Henrique', copilot: 'Luiz Meier'},
   ]
 
   participants.map.with_index(1) do |participant, index|
@@ -16,23 +21,10 @@ def list_devs
   end
 end
 
-def is_divisible_to_4(num)
-  if num % 4 == 0
-    return true
-  else
-    return false
-  end
-end
+def leap_year?(year)
+  return false if year <= 0
+  return true if year % 400 == 0
+  return false if year % 100 == 0
 
-def is_divisible_to_100(num)
-  if num % 100 == 0
-    return true
-  else
-    return false
-  end
-end
-
-
-def is_leap(year)
-  # return 'a'
+  year % 4 == 0 
 end

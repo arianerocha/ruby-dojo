@@ -10,7 +10,12 @@ RSpec.describe 'main' do
         "4° Pilot: Luiz Meier -- Copilot: Laura",
         "5° Pilot: Laura -- Copilot: Carlos Mafra",
         "6° Pilot: Carlos Mafra -- Copilot: Gabriel Muller",
-        "7° Pilot: Gabriel Muller -- Copilot: Igor F"
+        "7° Pilot: Gabriel Muller -- Copilot: Igor F",
+        "8° Pilot: Luiz Meier -- Copilot: Rohden",
+        "9° Pilot: Rohden -- Copilot: Arthur",
+        "10° Pilot: Arthur -- Copilot: Helder",
+        "11° Pilot: Helder -- Copilot: Henrique",
+        "12° Pilot: Henrique -- Copilot: Luiz Meier",
       ]
     end
 
@@ -19,31 +24,24 @@ RSpec.describe 'main' do
     end
   end
 
-  it 'nao eh divisivel por 4 e nao eh bissexto' do
-    test_value = (2*4)+1
-    expect(is_divisible_to_4(test_value)).to eq(false)
+  it 'returns true for leap years' do
+    expect(leap_year?(1600)).to eq(true)
+    expect(leap_year?(1732)).to eq(true)
+    expect(leap_year?(1888)).to eq(true)
+    expect(leap_year?(1944)).to eq(true)
+    expect(leap_year?(2008)).to eq(true)
   end
 
-  it 'eh divisivel por 100 nao eh bissexto' do
-    test_value = (200)
-    expect(is_divisible_to_100(test_value)).to eq(false)
+  it 'returns false for non leap years' do
+    expect(leap_year?(1742)).to eq(false)
+    expect(leap_year?(1889)).to eq(false)
+    expect(leap_year?(1951)).to eq(false)
+    expect(leap_year?(2011)).to eq(false)
   end
 
-  it 'eh divisivel por 400 eh bissexto' do
-    test_value = (2000)
-    expect(is_divisible_to_400(test_value)).to eq(true)
+  it 'deals with <= 0' do 
+    expect(leap_year?(0)).to eq(false)
+    expect(leap_year?(-400)).to eq(false)
   end
-
-  # it 'eh divisivel por 4 mas nao eh bissexto' do
-  #   test_value = 100
-  #   expect(is_leap(test_value)).to eq(false)
-  # end
-
-  # it 'nao eh divisivel por 100 mas nao eh bissexto' do
-  #   test_value = 70
-  #   expect(is_leap(test_value)).to eq(false)
-  # end
 end
 
-# rodar programa: bundle exec ruby main.rb
-# rodar teste: bundle exec rspec main_spec.rb 
